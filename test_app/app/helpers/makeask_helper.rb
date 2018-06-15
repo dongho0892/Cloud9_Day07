@@ -1,0 +1,2 @@
+module MakeaskHelper
+end

@@ -1,0 +1,8 @@
+<form action="/ask/<%= @ask.id %>/update" method="POST">    
+            
+            <!-- "/ask/<%= @ask.id %>/update" 어디로 보내야되는지 정해짐. -->
+            
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <input class="form-control" type="text" name="question" value="<%= @ask.question %>">
+    <input class="btn btn-success" type="submit" value="수정하기">
+</form>

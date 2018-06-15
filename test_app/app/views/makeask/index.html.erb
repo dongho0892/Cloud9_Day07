@@ -1,0 +1,26 @@
+<div>
+    
+    <ul class="list-group">
+    <% @makeasks.reverse.each do |ask| %>      <!-- 처음 쓴 글이 밑으로 오도록 처리. -->
+    <li class="list-group-item"> <%= ask.question %> <small><%= ask.ip_address %>,
+    
+    <%= ask.region %> </small>
+    
+    <a class="btn btn-success" href="/ask/<%= ask.id %>/show">보기</a>
+    
+    <a data-confirm="이 글을 수정하시겠습니까?" 
+        class="btn btn-danger" href="/ask/<%= ask.id %>/edit">수정</a>
+    
+    <a data-confirm="이 글을 삭제하겠습니까?" 
+        class="btn btn-danger" href="/ask/<%= ask.id %>/delete">삭제</a></li>  <!-- 질문 내용을 보여줄 것이다.-->
+
+
+
+    <% end %>                       <!-- data-confirm   class      href     -->                                    
+    </ul>   <!--       ___      
+       <!-- href="/ask/id=<#%= ask.id %#>/delete">   오류  수정함!!-->
+</div>
+<div class="text-center">
+    <a class="btn btn-success" href = "/ask/new"> 새 질문 등록하기 </a>
+    <!--링크 걸어주기-->
+</div>

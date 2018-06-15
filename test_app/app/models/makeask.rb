@@ -1,0 +1,2 @@
+class Makeask < ApplicationRecord
+end
